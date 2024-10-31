@@ -1,0 +1,136 @@
+<html>
+ <head>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 40px;
+            margin: 20px;
+        }
+        .navbar img {
+            height: 50px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #6c757d;
+            font-size: 16px;
+        }
+        .navbar .contact-button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #ffffff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 20px 20px;
+            }
+            .navbar ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .navbar ul.show {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <img alt="Logo" height="50" src="https://storage.googleapis.com/a1aa/image/gIJ3evXuhW0lFK8p1lmTgMwJMMz6OExJTjPoIICV8CUHNL2JA.jpg" width="50"/>
+   <div class="navbar-right">
+    <div class="hamburger" onclick="toggleMenu()">
+     <div>
+     </div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+    <ul id="nav-links">
+     <li>
+      <a href="#">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       About
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Attendance
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Events
+      </a>
+     </li>
+    </ul>
+    <a class="contact-button" href="tel:+919744466737">
+     +91 9744466737
+    </a>
+   </div>
+  </div>
+  <script>
+   function toggleMenu() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+  </script>
+ </body>
+</html>
